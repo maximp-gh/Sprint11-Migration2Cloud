@@ -26,7 +26,6 @@ jobs:
       id: tokenid
       with:
         script: |
-          #const coredemo = require('@actions/core')
           let id_token = await core.getIDToken()
           core.setOutput('id_token', id_token)
           echo "git token получен..."
