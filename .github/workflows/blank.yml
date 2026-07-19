@@ -20,14 +20,6 @@ jobs:
     steps:
     - name: Install OIDC Client from Core Package
       run: npm install @actions/http-client
-    - name: Get REAL OIDC sub (no extra magic)
-      run: |
-        # Получаем OIDC ID Token напрямую от GitHub OIDC provider
-        TOKEN=$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL")
-    
-        # Вырезаем payload (второй сегмент JWT) и декодируем base64url
-        echo "$TOKEN" | cut -d. -f2 | base64 -d | jq .sub
-
     # Получить токен задания рабочего процесса
     - name: Get Id Token
       uses: actions/github-script@v7
@@ -36,7 +28,7 @@ jobs:
         script: |
           let id_token = await core.getIDToken()
           core.setOutput('id_token', id_token)
-          console.log(`Token: ${id_token}`)
+
           const parts = id_token.split('.')
             const payload = Buffer.from(parts[1], 'base64').toString('utf8')
             const claims = JSON.parse(payload)
@@ -50,19 +42,10 @@ jobs:
     # Обменять токен задания рабочего процесса на IAM-токен сервисного аккаунта в Yandex Cloud
     - name: GetIAMToken
       run: |
-        SA_ID=aje585l0rmc4kskm7ejn
         FED_ID=ajejgigqia1lohktv68u
-        SA_ID=https://github.com/maximp-gh
         SA_ID=aje4vh3ai0qq2fsvhh54
 
-        curl -X POST \
-          -H "Content-Type: application/json" \
-          --data "{\"yandex_federation_id\":\"ajejgigqia1lohktv68u\",\"service_account_id\":\"aje585l0rmc4kskm7ejn\",\"jwt\":\"${{steps.tokenid.outputs.id_token}}\"}" \
-          https://iam.api.cloud.yandex.net/iam/v1/tokens
-
-
-        curl -sH "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ietf:params:oauth:grant-type:token-exchange&requested_token_type=urn:ietf:params:oauth:token-type:access_token&audience=$SA_ID&subject_token=${{steps.tokenid.outputs.id_token}}&subject_token_type=urn:ietf:params:oauth:token-type:id_token" -X POST https://iam.api.cloud.yandex.net/iam/v1/tokens
-
+        curl -sH "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ietf:params:oauth:grant-type:token-exchange&requested_token_type=urn:ietf:params:oauth:token-type:access_token&audience=$SA_ID&subject_token=${{steps.tokenid.outputs.id_token}}&subject_token_type=urn:ietf:params:oauth:token-type:id_token" -X POST https://auth.yandex.cloud/oauth/token
         IAMTOKEN=$(curl -sH "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ietf:params:oauth:grant-type:token-exchange&requested_token_type=urn:ietf:params:oauth:token-type:access_token&audience=$SA_ID&subject_token=${{steps.tokenid.outputs.id_token}}&subject_token_type=urn:ietf:params:oauth:token-type:id_token" -X POST https://auth.yandex.cloud/oauth/token | jq -r '.access_token')
         
         echo "IAMToken=${IAMTOKEN}"
@@ -73,5 +56,6 @@ jobs:
       run: |
         SECRET_ID=e6qg1rh9796g1tfesdgn
         SECRET_DATA=$(curl -sH "Authorization: Bearer ${{steps.IAMtoken.outputs.IAMTOKEN}}" https://payload.lockbox.api.cloud.yandex.net/lockbox/v1/secrets/$SECRET_ID/payload)
+        echo "s_data = ${SECRET_DATA}"
         echo "SECRET_DATA=${SECRET_DATA}" >> $GITHUB_OUTPUT
       id: getlockboxpayload
