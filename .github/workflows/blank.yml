@@ -20,6 +20,14 @@ jobs:
     steps:
     - name: Install OIDC Client from Core Package
       run: npm install @actions/http-client
+    - name: Get REAL OIDC sub (no extra magic)
+      run: |
+        # Получаем OIDC ID Token напрямую от GitHub OIDC provider
+        TOKEN=$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL")
+    
+        # Вырезаем payload (второй сегмент JWT) и декодируем base64url
+        echo "$TOKEN" | cut -d. -f2 | base64 -d | jq .sub
+
     # Получить токен задания рабочего процесса
     - name: Get Id Token
       uses: actions/github-script@v7
