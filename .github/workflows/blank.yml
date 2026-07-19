@@ -22,8 +22,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
           node-version: '24'
-    #- name: Install OIDC Client from Core Package
-    #  run: npm install @actions/core @actions/http-client
+    - name: Install OIDC Client from Core Package
+      run: npm ci @actions/core @actions/http-client
     # Получить токен задания рабочего процесса
     - name: Get Id Token
       uses: actions/github-script@v7
