@@ -26,7 +26,7 @@ jobs:
       id: tokenid
       with:
         script: |
-          let id_token = await core.getIDToken()
+          let id_token = await core.getIDToken('aje585l0rmc4kskm7ejn')
           core.setOutput('id_token', id_token)
     # Обменять токен задания рабочего процесса на IAM-токен сервисного аккаунта в Yandex Cloud
     - name: GetIAMToken
