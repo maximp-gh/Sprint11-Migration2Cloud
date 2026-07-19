@@ -18,6 +18,8 @@ jobs:
   job:
     runs-on: ubuntu-latest
     steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
     - name: Install OIDC Client from Core Package
       run: npm install @actions/core @actions/http-client
     # Получить токен задания рабочего процесса
