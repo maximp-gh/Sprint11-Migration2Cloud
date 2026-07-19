@@ -28,7 +28,6 @@ jobs:
         script: |
           let id_token = await core.getIDToken()
           core.setOutput('id_token', id_token)
-          echo "git token получен..."
     # Обменять токен задания рабочего процесса на IAM-токен сервисного аккаунта в Yandex Cloud
     - name: GetIAMToken
       run: |
