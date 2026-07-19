@@ -20,32 +20,27 @@ jobs:
     steps:
     #- name: Install OIDC Client from Core Package
     #  run: npm install @actions/core @actions/http-client
-    - name: Clean workspace (force)
-      run: |
-          echo "Removing any leftover node_modules that could break github-script"
-          rm -rf node_modules
-          rm -f package*.json
-          rm -f yarn.lock pnpm-lock.yaml
     # Получить токен задания рабочего процесса
     - name: Get Id Token
       uses: actions/github-script@v7
       id: tokenid
       with:
         script: |
-          const coredemo = require('@actions/core')
-          let id_token = await coredemo.getIDToken()
-          coredemo.setOutput('id_token', id_token)
+          #const coredemo = require('@actions/core')
+          let id_token = await core.getIDToken()
+          core.setOutput('id_token', id_token)
+          echo "git token получен..."
     # Обменять токен задания рабочего процесса на IAM-токен сервисного аккаунта в Yandex Cloud
     - name: GetIAMToken
       run: |
-        SA_ID="<идентификатор_сервисного_аккаунта>"
+        SA_ID=aje585l0rmc4kskm7ejn
         IAMTOKEN=$(curl -sH "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ietf:params:oauth:grant-type:token-exchange&requested_token_type=urn:ietf:params:oauth:token-type:access_token&audience=$SA_ID&subject_token=${{steps.tokenid.outputs.id_token}}&subject_token_type=urn:ietf:params:oauth:token-type:id_token" -X POST https://auth.yandex.cloud/oauth/token | jq -r '.access_token')
         echo "IAMToken=${IAMTOKEN}" >> $GITHUB_OUTPUT
       id: IAMtoken
     # Запросить значение секрета через API, используя IAM-токен в Yandex Cloud
     - name: GetLockboxPayload
       run: |
-        SECRET_ID="<идентификатор_секрета>"
+        SECRET_ID=e6qg1rh9796g1tfesdgn
         SECRET_DATA=$(curl -sH "Authorization: Bearer ${{steps.IAMtoken.outputs.IAMTOKEN}}" https://payload.lockbox.api.cloud.yandex.net/lockbox/v1/secrets/$SECRET_ID/payload)
         echo "SECRET_DATA=${SECRET_DATA}" >> $GITHUB_OUTPUT
       id: getlockboxpayload
