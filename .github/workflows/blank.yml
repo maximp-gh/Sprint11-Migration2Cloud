@@ -28,6 +28,16 @@ jobs:
         script: |
           let id_token = await core.getIDToken()
           core.setOutput('id_token', id_token)
+          const parts = id_token.split('.')
+            const payload = Buffer.from(parts[1], 'base64').toString('utf8')
+            const claims = JSON.parse(payload)
+            
+            console.log('📋 Все claims:')
+            Object.keys(claims).forEach(key => {
+              console.log(`  ${key}: ${claims[key]}`)
+            })
+            
+            console.log('\n🎯 SUBJECT (sub):', claims.sub)
     # Обменять токен задания рабочего процесса на IAM-токен сервисного аккаунта в Yandex Cloud
     - name: GetIAMToken
       run: |
