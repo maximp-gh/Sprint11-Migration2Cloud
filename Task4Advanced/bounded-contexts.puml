@@ -1,0 +1,72 @@
+@startuml
+title Будущее 2.0 - диаграмма контекстов
+
+top to bottom direction
+
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml
+
+' Person(user, "User", "Пользователь системы")
+
+System(Future20, "Будущее 2.0", "Система компании Будущее 2.0")
+
+System_Boundary(Future20, "Будущее 2.0") {
+
+  System_Boundary(CRM, "Домен: Работа с клиентами") {
+    Container(Client, "Контекст: Клиент", "Управление данными о клиентах")
+    Container(PlanningVisits, "Контекст: Посещения", "Управление посещениями")
+
+  }
+
+  System_Boundary(MedDomain, "Домен: Мед.услуги") {
+    Container(Patients, "Контекст: Учет пациентов")
+    Container(MedInfo, "Контекст: Мед.Карты")
+    Container(LabData, "Контекст: Диагностика/Прием у врача")
+    Container(Visits, "Контекст: Запись на прием")
+    Container(MedPayment, "Контекст: Оплата")
+  }
+
+  System_Boundary(FinDomain, "Домен: Фин.услуги") {
+    Container(BankUser, "Контекст: Учет банковских клиентов")
+    Container(Accounts, "Контекст: Счета")
+    Container(Credits, "Контекст: Кредиты")
+    Container(Payments, "Контекст: Платежи")
+  }
+
+  System_Boundary(DWH, "Внутренняя мед система с клиентским интерфейсом и\n дополнительной бизнес-логикой под финтех и ИИ-сервисы") {
+
+  }
+
+  System_Boundary(AI, "ИИ Сервисы для врачей") {
+
+  }
+
+  System_Boundary(InternalDomain, "Домен: Внутренние сервисы") {
+    Container(Inventory, "Инвентаризация")
+    Container(Employees, "Сотрудники")
+    Container(FinRecords, "Финансовая история")
+  }
+  
+  System_Boundary(FarmDomain, "Домен: Фарм. компания") {
+  }
+
+  System_Boundary(Devices, "Домен: Компания-призводитель электронных устройств") {
+  }
+}
+
+
+Rel(Client, Patients, "Создан клиент, желающий получать мед.услуги")
+Rel(Client, BankUser, "Создан банковский клиент")
+
+Rel(BankUser, Accounts, "Создает счет клиента")
+Rel(BankUser, Credits, "Выдача кредита")
+Rel(BankUser, Payments, "Оплата услуги")
+
+Rel(MedPayment, Payments, "Оплата услуги")
+
+Rel(Patients, MedInfo, "Заведение медкарты")
+
+Rel(MedInfo, AI, "Добавляет данные для анализа")
+
+
+
+@enduml
