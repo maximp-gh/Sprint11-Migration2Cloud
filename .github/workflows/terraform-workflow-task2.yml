@@ -14,8 +14,8 @@ jobs:
     permissions:
       id-token: write   # обязательно для OIDC
       contents: read    # обычно нужно для checkout
-    outputs:
-      yc_token: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
+    #outputs:
+    #  yc_token: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,6 +40,7 @@ jobs:
         run: |
           SA_ID=${{ secrets.SA_ID }}
           IAMTOKEN=$(curl -sH "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ietf:params:oauth:grant-type:token-exchange&requested_token_type=urn:ietf:params:oauth:token-type:access_token&audience=$SA_ID&subject_token=${{steps.tokenid.outputs.id_token}}&subject_token_type=urn:ietf:params:oauth:token-type:id_token" -X POST https://auth.yandex.cloud/oauth/token | jq -r '.access_token')
+          echo "::add-mask::$IAMTOKEN"
           echo "YC_TOKEN=${IAMTOKEN}" >> $GITHUB_OUTPUT
           echo "DEBUG: IAM token saved (length: ${#IAMTOKEN})"
          
@@ -94,6 +95,14 @@ jobs:
         run: | 
           terraform init
         
+      - name: GetIAMToken
+        id: IAMtoken
+        run: |
+          SA_ID=${{ secrets.SA_ID }}
+          IAMTOKEN=$(curl -sH "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ietf:params:oauth:grant-type:token-exchange&requested_token_type=urn:ietf:params:oauth:token-type:access_token&audience=$SA_ID&subject_token=${{steps.tokenid.outputs.id_token}}&subject_token_type=urn:ietf:params:oauth:token-type:id_token" -X POST https://auth.yandex.cloud/oauth/token | jq -r '.access_token')
+          echo "::add-mask::$IAMTOKEN"
+          echo "YC_TOKEN=${IAMTOKEN}" >> $GITHUB_OUTPUT
+          echo "DEBUG: IAM token saved (length: ${#IAMTOKEN})"
 
       - name: Download Plan Artifact
         uses: actions/download-artifact@v4
@@ -104,12 +113,14 @@ jobs:
       - name: Terraform Apply
         working-directory: Task2Advanced
         run: |
-          echo "::add-mask::${{ needs.terraform_plan.outputs.yc_token }}"
-          terraform apply -var="YC_TOKEN=${{ needs.terraform_plan.outputs.yc_token }}" -input=false -auto-approve tfplan
-
+          echo "::add-mask::${{ steps.IAMtoken.outputs.YC_TOKEN }}"
+          terraform apply  -input=false -auto-approve tfplan
+        env:
+          YC_TOKEN: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
       - name: destroy
         working-directory: Task2Advanced
         run: |
-          terraform destroy -var="YC_TOKEN=${{ needs.terraform_plan.outputs.yc_token }}"-auto-approve
-        
+          terraform destroy -auto-approve
+        env:
+          YC_TOKEN: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
       
