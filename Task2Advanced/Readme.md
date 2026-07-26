@@ -1,7 +1,7 @@
 ## Как запускать
 
 - Запуск вручную *"terraform-workflow-task2"* из github actions (см. .github/workflows/terraform-workflow-task2.yml)
-- Работает только в ветках main и work.
+- Работает только в ветках main и projectwork.
 - 2 Jobs: plan и apply.
 - plan создает tfplan в артефакты
 - apply потребует подтверждения и пользуется tfplan из артефактов
