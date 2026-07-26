@@ -83,6 +83,9 @@ jobs:
   apply:
     name: Terraform Apply
     needs: terraform_plan
+    permissions:
+      id-token: write   # обязательно для OIDC
+      contents: read    # обычно нужно для checkout
     runs-on: ubuntu-latest
     environment: terraform-apply   # <-- вот тут срабатывает approval
     steps:
