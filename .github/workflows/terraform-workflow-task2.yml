@@ -93,8 +93,7 @@ jobs:
         working-directory: Task2Advanced
         run: | 
           terraform init
-        env:
-          YC_TOKEN: ${{ needs.terraform_plan.outputs.yc_token }}
+        
 
       - name: Download Plan Artifact
         uses: actions/download-artifact@v4
@@ -105,16 +104,12 @@ jobs:
       - name: Terraform Apply
         working-directory: Task2Advanced
         run: |
-          echo "::add-mask::$YC_TOKEN"
-          terraform apply -input=false -auto-approve tfplan
-        env:
-          YC_TOKEN: ${{ needs.terraform_plan.outputs.yc_token }}
+          echo "::add-mask::${{ needs.terraform_plan.outputs.yc_token }}"
+          terraform apply -var="YC_TOKEN=${{ needs.terraform_plan.outputs.yc_token }}" -input=false -auto-approve tfplan
 
       - name: destroy
         working-directory: Task2Advanced
         run: |
-          echo "::add-mask::$YC_TOKEN"
-          terraform destroy -auto-approve
-        env:
-          YC_TOKEN: ${{ needs.terraform_plan.outputs.yc_token }}
+          terraform destroy -var="YC_TOKEN=${{ needs.terraform_plan.outputs.yc_token }}"-auto-approve
+        
       
