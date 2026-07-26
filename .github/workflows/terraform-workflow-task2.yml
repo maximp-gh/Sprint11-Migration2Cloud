@@ -51,6 +51,7 @@ jobs:
       #    Остальные YC* нужны для развертывания инфраструктуры - в GitHub vars
       #    AWS* нужны для сохранения tfstate в любой S3 backend в terraform - в GitHub secrets
       - name: Terraform init
+        working-directory: Task2Advanced
         run: | 
           terraform init
         env:
@@ -58,12 +59,14 @@ jobs:
           
       - name: Terraform Validate
         run: terraform validate
+        working-directory: Task2Advanced
         env:
           YC_TOKEN: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
 
       # TODO: Не проверяем на no change
       - name: Terraform Plan
         run: terraform plan -out=tfplan
+        working-directory: Task2Advanced
         env:
           YC_TOKEN: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
 
@@ -71,7 +74,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: tfplan
-          path: tfplan
+          path: Task2Advanced/tfplan
           retention-days: 1
 
   apply:
@@ -86,6 +89,7 @@ jobs:
         uses: hashicorp/setup-terraform@v4
 
       - name: Terraform init
+        working-directory: Task2Advanced
         run: | 
           terraform init
         env:
@@ -94,14 +98,17 @@ jobs:
       - name: Download Plan Artifact
         uses: actions/download-artifact@v4
         with:
-          name: tfplan
+          name: tfplan 
+          path: Task2Advanced/tfplan
 
       - name: Terraform Apply
+        working-directory: Task2Advanced
         run: terraform apply -input=false -auto-approve tfplan
         env:
           YC_TOKEN: ${{ needs.terraform-plan.outputs.yc-token }}
 
       - name: destroy
+        working-directory: Task2Advanced
         run: terraform destroy -auto-approve
         env:
           YC_TOKEN: ${{ needs.terraform-plan.outputs.yc-token }}
