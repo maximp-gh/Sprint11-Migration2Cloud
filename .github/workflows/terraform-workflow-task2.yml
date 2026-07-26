@@ -94,7 +94,7 @@ jobs:
         run: | 
           terraform init
         env:
-          YC_TOKEN: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
+          YC_TOKEN: ${{ needs.terraform-plan.outputs.yc-token }}
 
       - name: Download Plan Artifact
         uses: actions/download-artifact@v4
