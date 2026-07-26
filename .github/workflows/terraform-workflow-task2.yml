@@ -14,9 +14,9 @@ jobs:
     permissions:
       id-token: write   # обязательно для OIDC
       contents: read    # обычно нужно для checkout
-    #outputs:
+    outputs:
       #git_token: steps.tokenid.id_token
-      #  yc_token: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
+      yc_token: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,10 +41,8 @@ jobs:
         run: |
           SA_ID=${{ secrets.SA_ID }}
           IAMTOKEN=$(curl -sH "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ietf:params:oauth:grant-type:token-exchange&requested_token_type=urn:ietf:params:oauth:token-type:access_token&audience=$SA_ID&subject_token=${{steps.tokenid.outputs.id_token}}&subject_token_type=urn:ietf:params:oauth:token-type:id_token" -X POST https://auth.yandex.cloud/oauth/token | jq -r '.access_token')
-          echo "::add-mask::$IAMTOKEN"
           echo "YC_TOKEN=${IAMTOKEN}" >> $GITHUB_OUTPUT
           echo "DEBUG: IAM token saved (length: ${#IAMTOKEN})"
-         
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         
@@ -100,12 +98,6 @@ jobs:
         run: | 
           terraform init
         
-      - name: Get Fresh Yandex Cloud IAM Token
-        id: get_token
-        uses: docker://ghcr.io/yc-actions/yc-iam-token-fed:1.0.0
-        with:
-          yc-sa-id: ${{ secrets.SA_ID }}
-
       - name: Download Plan Artifact
         uses: actions/download-artifact@v4
         with:
@@ -115,14 +107,13 @@ jobs:
       - name: Terraform Apply
         working-directory: Task2Advanced
         run: |
-          echo "::add-mask::${{ steps.get_token.outputs.token }}"
           terraform apply  -input=false -auto-approve tfplan
         env:
-          YC_TOKEN: ${{ steps.get_token.outputs.token }}
+          YC_TOKEN: ${{ needs.terraform_plan.outputs.yc_token }}
       - name: destroy
         working-directory: Task2Advanced
         run: |
           terraform destroy -auto-approve
         env:
-          YC_TOKEN: ${{ steps.IAMtoken.outputs.YC_TOKEN }}
+          YC_TOKEN: ${{ needs.terraform_plan.outputs.yc_token }}
       
