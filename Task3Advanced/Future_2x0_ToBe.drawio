@@ -1,12 +1,12 @@
 <mxfile host="Electron">
   <diagram name="Page-1" id="tQ6tFf-hqmwDOGM9q8PL">
-    <mxGraphModel dx="1505" dy="1241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2053" dy="1693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <object placeholders="1" c4Name="Portal" c4Type="Container" c4Technology="Dremio,Nessie" c4Description="Self-service portal" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="XES3PJ8a_MChOZnUbxqi-1">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="70" width="170" x="1200" y="420" as="geometry" />
+            <mxGeometry height="70" width="170" x="1430" y="370" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Legacy DWH" c4Type="Software System" c4Description="Legacy DWH" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="XES3PJ8a_MChOZnUbxqi-2">
@@ -16,14 +16,9 @@
         </object>
         <object placeholders="1" c4Name="Новые сервисы" c4Type="Container" c4Technology="Go/Python/Java" c4Description="Новые сервисы" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="XES3PJ8a_MChOZnUbxqi-4">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="90" width="140" x="1140" y="220" as="geometry" />
+            <mxGeometry height="90" width="140" x="1290" y="180" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="fodBlOPD_4bt_w_wiLMq-4" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.3;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=classic;startFill=1;" target="XES3PJ8a_MChOZnUbxqi-9">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="675" y="200" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="fodBlOPD_4bt_w_wiLMq-13" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -34,12 +29,12 @@
         </object>
         <object placeholders="1" c4Name="Event Topics" c4Type="Container" c4Technology="Apache Kafka" c4Description="Events" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="XES3PJ8a_MChOZnUbxqi-9">
           <mxCell parent="1" style="shape=cylinder3;size=15;direction=south;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#ffe6cc;fontSize=12;align=center;strokeColor=#d79b00;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=1;" vertex="1">
-            <mxGeometry height="100" width="190" x="950" y="340" as="geometry" />
+            <mxGeometry height="100" width="190" x="1170" y="375" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Data LakeHouse" c4Type="Container" c4Technology="S3" c4Description="Многоуровневое хранилище данных и метаданных" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="XES3PJ8a_MChOZnUbxqi-10">
           <mxCell parent="1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#ffe6cc;fontSize=12;align=center;strokeColor=#d79b00;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=1;" vertex="1">
-            <mxGeometry height="120" width="240" x="930" y="540" as="geometry" />
+            <mxGeometry height="120" width="240" x="930" y="555" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="ИИ Сервисы" c4Type="Container" c4Technology="Python" c4Description="ИИ Сервисы" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="XES3PJ8a_MChOZnUbxqi-11">
@@ -70,8 +65,14 @@
             <mxGeometry height="105" width="165" x="350" y="570" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="XES3PJ8a_MChOZnUbxqi-19" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XES3PJ8a_MChOZnUbxqi-9">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="XES3PJ8a_MChOZnUbxqi-19" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.893;entryDx=0;entryDy=0;entryPerimeter=0;" target="igAj0RcTehUdKqYscN4w-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880.02" y="525.02" />
+              <mxPoint x="880.02" y="400" />
+              <mxPoint x="939.62" y="400" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <object placeholders="1" c4Name="CDC" c4Type="Container" c4Technology="JDBC" c4Description="CDC Service" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="XES3PJ8a_MChOZnUbxqi-17">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
@@ -80,15 +81,6 @@
         </object>
         <mxCell id="fodBlOPD_4bt_w_wiLMq-1" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="XES3PJ8a_MChOZnUbxqi-16">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="fodBlOPD_4bt_w_wiLMq-5" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.008;exitY=0.637;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.397;entryY=0.005;entryDx=0;entryDy=0;entryPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-10">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1019" y="470.07" />
-              <mxPoint x="1025.27" y="470.07" />
-            </Array>
-            <mxPoint x="1050" y="575" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="fodBlOPD_4bt_w_wiLMq-6" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.692;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-17">
           <mxGeometry relative="1" as="geometry" />
@@ -108,19 +100,21 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fodBlOPD_4bt_w_wiLMq-10" edge="1" parent="1" source="fodBlOPD_4bt_w_wiLMq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.638;entryY=1.002;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;startArrow=classicThin;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-9">
+        <mxCell id="fodBlOPD_4bt_w_wiLMq-10" edge="1" parent="1" source="igAj0RcTehUdKqYscN4w-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.864;entryY=0.968;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;startArrow=classicThin;startFill=1;exitX=0.996;exitY=0.352;exitDx=0;exitDy=0;exitPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-9">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="900.07" y="635" />
-              <mxPoint x="900.07" y="403.8" />
-            </Array>
+            <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="fodBlOPD_4bt_w_wiLMq-11" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.195;entryY=0.028;entryDx=0;entryDy=0;entryPerimeter=0;" target="fodBlOPD_4bt_w_wiLMq-15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fodBlOPD_4bt_w_wiLMq-12" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="XES3PJ8a_MChOZnUbxqi-9">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="fodBlOPD_4bt_w_wiLMq-12" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.995;entryY=0.339;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="igAj0RcTehUdKqYscN4w-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1360" y="350" />
+              <mxPoint x="1071.27" y="350" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="fodBlOPD_4bt_w_wiLMq-14" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-16">
           <mxGeometry relative="1" as="geometry" />
@@ -131,7 +125,12 @@
           </mxCell>
         </object>
         <mxCell id="fodBlOPD_4bt_w_wiLMq-16" edge="1" parent="1" source="fodBlOPD_4bt_w_wiLMq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-12">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685.05" y="690" />
+              <mxPoint x="825.05" y="690" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <object placeholders="1" c4Name="GSLB" c4Type="Container" c4Technology="" c4Description="GSLB" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="fodBlOPD_4bt_w_wiLMq-17">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
@@ -140,7 +139,7 @@
         </object>
         <object placeholders="1" c4Name="Auth" c4Type="Container" c4Technology="OAuth2, OIDC, IdM, RBAC" c4Description="Auth" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="fodBlOPD_4bt_w_wiLMq-18">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="90" width="190" x="920" y="220" as="geometry" />
+            <mxGeometry height="90" width="140" x="930" y="190" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Облачные ИИ Сервисы" c4Type="Container" c4Technology="Python" c4Description="Облачные ИИ Сервисы" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="fodBlOPD_4bt_w_wiLMq-19">
@@ -150,7 +149,7 @@
         </object>
         <object placeholders="1" c4Name="Облако" c4Type="SystemScopeBoundary" c4Application="Облако" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="fodBlOPD_4bt_w_wiLMq-20">
           <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="820" width="950" x="600" y="20" as="geometry" />
+            <mxGeometry height="820" width="1070" x="600" y="20" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="fodBlOPD_4bt_w_wiLMq-25" edge="1" parent="1" source="fodBlOPD_4bt_w_wiLMq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-4">
@@ -177,14 +176,30 @@
         <mxCell id="fodBlOPD_4bt_w_wiLMq-26" edge="1" parent="1" source="fodBlOPD_4bt_w_wiLMq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fodBlOPD_4bt_w_wiLMq-27" edge="1" parent="1" source="fodBlOPD_4bt_w_wiLMq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.706;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="fodBlOPD_4bt_w_wiLMq-27" edge="1" parent="1" source="fodBlOPD_4bt_w_wiLMq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510.09" y="122.45" />
+              <mxPoint x="1510.09" y="370.09" />
+            </Array>
+            <mxPoint x="1510.09" y="370" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="fodBlOPD_4bt_w_wiLMq-28" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.853;entryY=0.071;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="XES3PJ8a_MChOZnUbxqi-10">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="fodBlOPD_4bt_w_wiLMq-28" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.949;entryY=0.076;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="XES3PJ8a_MChOZnUbxqi-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1515.03" y="548.48" />
+              <mxPoint x="1157.82" y="548.48" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="fodBlOPD_4bt_w_wiLMq-29" edge="1" parent="1" source="fodBlOPD_4bt_w_wiLMq-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-10">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1265.03" y="695.03" />
+              <mxPoint x="1050" y="695.03" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <object placeholders="1" c4Name="Monitoring, Logging, Audit" c4Type="Container" c4Technology="" c4Description="Средства повышения наблюдаемости" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="fodBlOPD_4bt_w_wiLMq-30">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
@@ -193,17 +208,17 @@
         </object>
         <object placeholders="1" c4Name="Data Catalog" c4Type="Container" c4Technology="DataHub" c4Description="Data Catalog" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="EB9Bgpm7KX_lSNhAT6zn-1">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="70" width="170" x="1200" y="530" as="geometry" />
+            <mxGeometry height="70" width="170" x="1280" y="610" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="SIEM" c4Type="Container" c4Technology="SIEM" c4Description="SIEM" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="y3FX5eZ5MI2F9ravrDOj-1">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="70" width="170" x="1350" y="230" as="geometry" />
+            <mxGeometry height="70" width="160" x="1490" y="630" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="KMS" c4Type="Container" c4Technology="KMS, Vault" c4Description="KMS" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="y3FX5eZ5MI2F9ravrDOj-2">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="70" width="170" x="1350" y="310" as="geometry" />
+            <mxGeometry height="70" width="160" x="1490" y="720" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Refactored_DWH" c4Type="Микросервис" c4Technology="Go" c4Description="Refactored DWH Business logic" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="oPgTMDabvZb6641dH-fe-1">
@@ -211,9 +226,6 @@
             <mxGeometry height="90" width="130" x="710" y="340" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="oPgTMDabvZb6641dH-fe-3" edge="1" parent="1" source="oPgTMDabvZb6641dH-fe-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.412;entryY=0.992;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="XES3PJ8a_MChOZnUbxqi-9">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <object placeholders="1" c4Name="Refactored_DWH" c4Type="Микросервис" c4Technology="Go" c4Description="Refactored DWH Business logic" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="oPgTMDabvZb6641dH-fe-4">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
             <mxGeometry height="90" width="130" x="720" y="350" as="geometry" />
@@ -229,14 +241,57 @@
         </mxCell>
         <object placeholders="1" c4Name="Новые сервисы" c4Type="Container" c4Technology="Go/Python/Java" c4Description="Новые сервисы" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="oPgTMDabvZb6641dH-fe-7">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="90" width="140" x="1150" y="230" as="geometry" />
+            <mxGeometry height="90" width="140" x="1300" y="190" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Новые сервисы" c4Type="Container" c4Technology="Go/Python/Java" c4Description="Новые сервисы" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="oPgTMDabvZb6641dH-fe-8">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="90" width="140" x="1160" y="240" as="geometry" />
+            <mxGeometry height="90" width="140" x="1310" y="200" as="geometry" />
           </mxCell>
         </object>
+        <object placeholders="1" c4Name="Apache Flink" c4Type="Container" c4Technology="Apache Flink" c4Description="Тяжелые трансформации данных" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="igAj0RcTehUdKqYscN4w-2">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="90" width="130" x="890" y="430" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="igAj0RcTehUdKqYscN4w-3" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.167;exitY=0.972;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="igAj0RcTehUdKqYscN4w-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="391.67" />
+            </Array>
+            <mxPoint x="1239" y="471" as="sourcePoint" />
+            <mxPoint x="1025" y="541" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="igAj0RcTehUdKqYscN4w-4" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=classic;startFill=1;" target="igAj0RcTehUdKqYscN4w-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="840" y="235" as="sourcePoint" />
+            <mxPoint x="1218" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="NiFi" c4Type="Container" c4Technology="Apache NiFi" c4Description="Управление потоком данных" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="igAj0RcTehUdKqYscN4w-1">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#ffe6cc;align=center;arcSize=10;strokeColor=#d79b00;metaEdit=1;resizable=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="90" width="130" x="940" y="320" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="igAj0RcTehUdKqYscN4w-5" edge="1" parent="1" source="oPgTMDabvZb6641dH-fe-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.998;exitY=0.124;exitDx=0;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="859.71" y="370" />
+            </Array>
+            <mxPoint x="940" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="igAj0RcTehUdKqYscN4w-6" edge="1" parent="1" source="XES3PJ8a_MChOZnUbxqi-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.676;entryY=0.032;entryDx=0;entryDy=0;entryPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="igAj0RcTehUdKqYscN4w-8" edge="1" parent="1" source="igAj0RcTehUdKqYscN4w-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.846;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="oPgTMDabvZb6641dH-fe-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="igAj0RcTehUdKqYscN4w-9" edge="1" parent="1" source="igAj0RcTehUdKqYscN4w-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.223;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;" target="XES3PJ8a_MChOZnUbxqi-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
